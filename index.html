@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    function get(){
-        var xhr = new XMLHttpRequest();
-    xhr.open('GET', "http://c1536939.ngrok.io/Portal_war_exploded/addUser/{\"username\":\""+ username.value + "\",\"password\":\"" +  password.value + "\",\"mail\":\"" +mail.value + "\",\"examenes\":[]}", false);
-    xhr.send();
-    }
-</script>
 <head>
     <title>Portal Selenium</title>
     <link rel="stylesheet" href="style.css">
@@ -20,8 +13,8 @@
 
 
     <div class="section" id="mainDiv">
-        <form class="section" onsubmit= post(user,pass,mail) >
-            <input name="user" title="usuario" type="text " placeholder="DNI" autofocus required>
+        <form class="section" onsubmit=get(user,pass,mail) >
+            <input name="user" title="usuario" type="text" placeholder="DNI" autofocus required>
             <input name="pass" title="contraseña" type="password" placeholder="Password" required>
             <input name="mail" title="eMail" type="email" placeholder="email@example.com" required>
             <input type="submit" value="SEND" >
